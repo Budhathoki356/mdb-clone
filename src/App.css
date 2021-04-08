@@ -1,38 +1,118 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap');
+body {
+  font-family: 'Playfair Display', serif !important;
+  background: #141414 !important;
+  color: #ffffff !important;
+}
+
+a:-webkit-any-link {
+  text-decoration: none !important;
+  color: Black !important;
+}
+
+.logo {
+  text-decoration: none !important;
+  color: orangered !important;
+}
+
+.movie-app>.row {
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-wrap: nowrap;
+}
+
+.movie-app>.row::-webkit-scrollbar {
+  display: none;
+}
+
+.image-container {
+  position: relative;
+  transition: transform 0.2s;
+  /* margin: 20px; */
+}
+
+.image-container:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.movie-detail {
+  margin: 0 300px !important;
+  margin-top: 2rem !important;
+}
+
+.movie-content {
+  padding-left: 50px !important;
+}
+
+.movie-content h2 {
+  margin-bottom: 20px !important;
+}
+
+.movie-content__inner{
+  margin-top: 20px;
+}
+
+.movie-content__inner span {
+  width: 70px !important;
+  background-color: orange;
+  padding: 8px;
+  border-radius: 5px;
+  display: block;
+  margin-right: 15px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie-description {
+  letter-spacing: 1.5px !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.content-more {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.movie-suggestion {
+  margin-top: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-suggestion h2 {
+  display: block;
+  width: 100%;
+}
+
+.movie-suggestion__inner {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating {
+  background-color: orange;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.movie-title {
+  width: 200px;
+}
+.movie-heading {
+  border-bottom: 1px solid gray;
 }
